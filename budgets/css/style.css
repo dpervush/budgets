@@ -1001,7 +1001,7 @@ body.ie ._ibg img {
 }
 
 .menu-list__item:last-child {
-  margin-right: 0;
+  margin-right: 30px;
 }
 
 .menu-list__link {
@@ -1134,56 +1134,14 @@ body.ie ._ibg img {
   background-repeat: no-repeat;
 }
 
-/*
-//Burger
-.icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
-}
-*/
-
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+.advantages__content {
+  margin-bottom: 102px;
 }
 
 .advantages__wrapper {
@@ -1231,6 +1189,150 @@ body.ie ._ibg img {
   height: 71px;
 }
 
+.offer__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 70px;
+}
+
+.offer__title::after {
+  position: absolute;
+  content: "";
+  width: 171.45px;
+  height: 165px;
+  top: -70px;
+  right: -100px;
+  background-image: url(../img/triangle.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.offer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.offer__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 362px;
+  margin-bottom: 20px;
+  padding-bottom: 33px;
+  border-radius: 20px;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 45px;
+  color: #2aa270;
+}
+
+.item-offer {
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-offer__img {
+  display: inline-block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.item-offer__descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 45px;
+  padding-right: 40px;
+}
+
+.item-offer__title {
+  margin: 25px 0px 20px 0px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #282827;
+}
+
+.item-offer__gradient-box {
+  width: 172px;
+  height: 50px;
+  position: relative;
+  background: #ffffff;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  color: #2aa270;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.item-offer__gradient-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: -o-linear-gradient(335.1deg, #1a3f79 3.54%, #2aa270 85.05%);
+  background: linear-gradient(114.9deg, #1a3f79 3.54%, #2aa270 85.05%);
+}
+
+.item-offer__btn {
+  display: inline-block;
+  position: relative;
+  padding: 11px 34px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  font-weight: 800;
+  line-height: 24px;
+  color: inherit;
+}
+
+.item-offer__btn::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 18px;
+  top: 50%;
+  right: 34px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url(../img/icons/path-arrow-green.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -1273,6 +1375,58 @@ body.ie ._ibg img {
     max-width: none;
     padding: 0 10px;
   }
+
+  .icon-menu {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .icon-menu span {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+
+  .icon-menu._active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .icon-menu._active span:first-child {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+
+  .icon-menu._active span:last-child {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: calc(50% - 1px);
+  }
 }
 @supports (-webkit-appearance:none){
 .select__value:before{background:url("../img/icons/select.svg") center/100% no-repeat}
@@ -1284,6 +1438,8 @@ body.ie ._ibg img {
 .header{background-image:url(../img/header-bg.webp)}
 .hero-header__text::after{background-image:url(../img/icons/path-arrow.svg)}
 .hero-header__button-link::after{background-image:url(../img/icons/play.svg)}
+.offer__title::after{background-image:url(../img/triangle.svg)}
+.item-offer__btn::after{background-image:url(../img/icons/path-arrow-green.svg)}
 }
 
  @media (min-width: 991.98px){

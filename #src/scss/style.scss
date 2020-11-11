@@ -29,6 +29,11 @@ $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
+
+$green: #2aa270;
+$title: #282827;
+
+$border: 2px;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
@@ -96,6 +101,7 @@ body {
 .advantages {
 	// .advantages__content
 	&__content {
+		margin-bottom: 102px;
 	}
 	// .advantages__wrapper
 	&__wrapper {
@@ -130,6 +136,143 @@ body {
 	}
 	// .item-advantages__text
 	&__text {
+	}
+}
+
+.offer {
+	// .offer__content
+	&__content {
+	}
+	// .offer__body
+	&__body {
+	}
+	// .offer__title
+	&__title {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 70px;
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 171.45px;
+			height: 165px;
+			top: -70px;
+			right: -100px;
+			background-image: url(../img/triangle.svg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	}
+	// .offer__inner
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	// .offer__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 362px;
+		margin-bottom: 20px;
+		padding-bottom: 33px;
+
+		border-radius: 20px;
+	}
+}
+.title {
+	font-weight: 800;
+	font-size: 42px;
+
+	line-height: 45px;
+	color: $green;
+}
+.item-offer {
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	// .item-offer__img
+	&__img {
+		display: inline-block;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+	}
+	// .item-offer__text
+	&__descr {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex: 1 1 auto;
+		padding-left: 45px;
+		padding-right: 40px;
+	}
+	// .item-offer__title
+	&__title {
+		margin: 25px 0px 20px 0px;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 27px;
+		color: $title;
+	}
+	// .item-offer__gradient-box
+	&__gradient-box {
+		width: 172px;
+		height: 50px;
+
+		position: relative;
+
+		background: #ffffff;
+		background-clip: padding-box;
+		border: $border solid transparent;
+		border-radius: 100px;
+		color: $green;
+
+		transition: all 0.5s;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			margin: -$border;
+			border-radius: inherit;
+			background: linear-gradient(114.9deg, #1a3f79 3.54%, #2aa270 85.05%);
+		}
+
+		&:hover {
+			// background: linear-gradient(114.9deg, #1a3f79 3.54%, #2aa270 85.05%);
+			// color: linear-gradient(114.9deg, #1a3f79 3.54%, #2aa270 85.05%);
+		}
+	}
+
+	// .item-offer__btn
+	&__btn {
+		display: inline-block;
+		position: relative;
+		padding: 11px 34px;
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+		font-weight: 800;
+		line-height: 24px;
+		color: inherit;
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 15px;
+			height: 18px;
+			top: 50%;
+			right: 34px;
+			transform: translateY(-50%);
+			background-image: url(../img/icons/path-arrow-green.svg);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
 	}
 }
 
