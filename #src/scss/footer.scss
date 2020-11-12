@@ -1,5 +1,40 @@
-footer{}
+footer {
+}
 //====================================================================================================
-
+.footer {
+  background-color: $title;
+  // .footer__content
+  &__content {
+    padding: 35px 0;
+  }
+  // .footer__body
+  &__body {
+  }
+  // .footer__inner
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  // .footer__info
+  &__info {
+  }
+}
+.info-footer {
+  color: #ffffff;
+  text-align: right;
+  // .info-footer__hour
+  &__hour {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  // .info-footer__link
+  &__link {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: inherit;
+  }
+}
 //====================================================================================================
-

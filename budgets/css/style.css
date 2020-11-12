@@ -951,10 +951,6 @@ body.ie ._ibg img {
   padding: 30px 0 23px;
 }
 
-.header__logo {
-  width: 137px;
-}
-
 .header__slogan {
   max-width: 165px;
   margin: 0px 50px 0px 25px;
@@ -1144,10 +1140,52 @@ body.ie ._ibg img {
   background-repeat: no-repeat;
 }
 
+.footer {
+  background-color: #282827;
+}
+
+.footer__content {
+  padding: 35px 0;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-footer {
+  color: #ffffff;
+  text-align: right;
+}
+
+.info-footer__hour {
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.info-footer__link {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 18px;
+  color: inherit;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+._logo {
+  width: 137px;
 }
 
 ._triangle::after {
