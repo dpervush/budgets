@@ -1063,7 +1063,8 @@ body.ie ._ibg img {
 }
 
 .hero-header__button,
-.item-form__bnt {
+.item-form__bnt,
+.form-banner__btn {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1084,7 +1085,8 @@ body.ie ._ibg img {
 }
 
 .hero-header__button::before,
-.item-form__bnt::before {
+.item-form__bnt::before,
+.form-banner__btn::before {
   position: absolute;
   content: "";
   width: calc(100% + 10px);
@@ -1100,7 +1102,8 @@ body.ie ._ibg img {
 }
 
 .hero-header__button::after,
-.item-form__bnt::after {
+.item-form__bnt::after,
+.form-banner__btn::after {
   content: "";
   width: 50px;
   height: 100%;
@@ -1113,7 +1116,8 @@ body.ie ._ibg img {
 }
 
 .hero-header__button-link,
-.item-form__bnt-link {
+.item-form__bnt-link,
+.form-banner__bnt-link {
   position: relative;
   display: inline-block;
   font-weight: 800;
@@ -1123,7 +1127,8 @@ body.ie ._ibg img {
 }
 
 .hero-header__button-link::after,
-.item-form__bnt-link::after {
+.item-form__bnt-link::after,
+.form-banner__bnt-link::after {
   position: absolute;
   content: "";
   width: 16px;
@@ -1143,6 +1148,23 @@ body.ie ._ibg img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+}
+
+._triangle::after {
+  position: absolute;
+  content: "";
+  width: 171.45px;
+  height: 165px;
+  top: -70px;
+  right: -100px;
+  background-image: url(../img/triangle.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+._triangle._red::after {
+  background-image: url(../img/triangle-red.svg);
 }
 
 .advantages__content {
@@ -1234,19 +1256,6 @@ body.ie ._ibg img {
   font-size: 42px;
   line-height: 63px;
   color: #2aa270;
-}
-
-.title::after {
-  position: absolute;
-  content: "";
-  width: 171.45px;
-  height: 165px;
-  top: -70px;
-  right: -100px;
-  background-image: url(../img/triangle.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .item-offer {
@@ -1391,11 +1400,6 @@ body.ie ._ibg img {
   color: #ffffff;
 }
 
-.sale__title::after,
-.license__title::after {
-  background-image: url(../img/triangle-red.svg);
-}
-
 .sale__text {
   max-width: 190px;
   font-weight: 500;
@@ -1442,7 +1446,8 @@ body.ie ._ibg img {
   color: #282827;
 }
 
-.item-form__input {
+.item-form__input,
+.form-banner__input {
   display: block;
   width: 100%;
   height: 50px;
@@ -1452,47 +1457,51 @@ body.ie ._ibg img {
   border-radius: 20px;
 }
 
-.item-form__input::-webkit-input-placeholder {
+.item-form__input::-webkit-input-placeholder, .form-banner__input::-webkit-input-placeholder {
   font-size: 12px;
   line-height: 24px;
   color: #91918e;
 }
 
-.item-form__input::-moz-placeholder {
+.item-form__input::-moz-placeholder, .form-banner__input::-moz-placeholder {
   font-size: 12px;
   line-height: 24px;
   color: #91918e;
 }
 
-.item-form__input:-ms-input-placeholder {
+.item-form__input:-ms-input-placeholder, .form-banner__input:-ms-input-placeholder {
   font-size: 12px;
   line-height: 24px;
   color: #91918e;
 }
 
-.item-form__input::-ms-input-placeholder {
+.item-form__input::-ms-input-placeholder, .form-banner__input::-ms-input-placeholder {
   font-size: 12px;
   line-height: 24px;
   color: #91918e;
 }
 
-.item-form__input::placeholder {
+.item-form__input::placeholder,
+.form-banner__input::placeholder {
   font-size: 12px;
   line-height: 24px;
   color: #91918e;
 }
 
-.item-form__bnt {
+.item-form__bnt,
+.form-banner__btn {
   margin-top: 30px;
   margin-bottom: 27px;
   max-width: 235px;
 }
 
-.item-form__bnt-link {
+.item-form__bnt-link,
+.form-banner__bnt-link {
   background-color: transparent;
 }
 
-.item-form__bnt-link::after {
+.item-form__bnt-link::after,
+.form-banner__bnt-link::after {
   right: -58px;
 }
 
@@ -1662,6 +1671,80 @@ body.ie ._ibg img {
           transform: scale(1.2);
 }
 
+.banner {
+  background-image: url(../img/banner-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner__content {
+  padding: 70px 0 53px;
+}
+
+.banner__title {
+  max-width: 680px;
+  color: #ffffff;
+}
+
+.banner__title span {
+  background-color: #f33439;
+  background-image: -o-linear-gradient(45deg, #fe5a35 0%, #f33439 100%);
+  background-image: linear-gradient(45deg, #fe5a35 0%, #f33439 100%);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.banner__title span span {
+  text-transform: uppercase;
+}
+
+.banner__text {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 63px;
+  color: #ffffff;
+}
+
+.form-banner {
+  max-width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-banner__input {
+  display: inline-block;
+  margin-right: -50px;
+  padding-right: 80px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 100px;
+}
+
+.form-banner__btn {
+  width: 171px;
+  margin: 0;
+  top: 3px;
+}
+
+.form-banner__bnt-link {
+  margin-right: 12px;
+}
+
+.form-banner__bnt-link::after {
+  right: -46px;
+}
+
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -1766,13 +1849,14 @@ body.ie ._ibg img {
 .popup__close{background:url("../img/icons/close.svg") 0 0 no-repeat}
 .header{background-image:url(../img/header-bg.webp)}
 .hero-header__text::after{background-image:url(../img/icons/path-arrow.svg)}
-.hero-header__button-link::after,.item-form__bnt-link::after{background-image:url(../img/icons/play.svg)}
-.title::after{background-image:url(../img/triangle.svg)}
+.hero-header__button-link::after,.item-form__bnt-link::after,.form-banner__bnt-link::after{background-image:url(../img/icons/play.svg)}
+._triangle::after{background-image:url(../img/triangle.svg)}
+._triangle._red::after{background-image:url(../img/triangle-red.svg)}
 .item-offer__btn::after{background-image:url(../img/icons/path-arrow-green.svg)}
 .sale{background-image:url(../img/sale-bg.webp)}
 .sale__content::after{background-image:url(../img/budget.webp)}
-.sale__title::after,.license__title::after{background-image:url(../img/triangle-red.svg)}
 .license{background-image:url(../img/license-bg.webp)}
+.banner{background-image:url(../img/banner-bg.webp)}
 }
 
  @media (min-width: 991.98px){
