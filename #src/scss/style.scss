@@ -150,22 +150,7 @@ body {
 	}
 	// .offer__title
 	&__title {
-		position: relative;
-		display: inline-block;
 		margin-bottom: 70px;
-
-		&::after {
-			position: absolute;
-			content: "";
-			width: 171.45px;
-			height: 165px;
-			top: -70px;
-			right: -100px;
-			background-image: url(../img/triangle.svg);
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
 	}
 	// .offer__inner
 	&__inner {
@@ -185,11 +170,26 @@ body {
 	}
 }
 .title {
+	position: relative;
+	display: inline-block;
 	font-weight: 800;
 	font-size: 42px;
 
 	line-height: 45px;
 	color: $green;
+
+	&::after {
+		position: absolute;
+		content: "";
+		width: 171.45px;
+		height: 165px;
+		top: -70px;
+		right: -100px;
+		background-image: url(../img/triangle.svg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 .item-offer {
 	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -317,6 +317,10 @@ body {
 	&__title {
 		margin-bottom: 21px;
 		color: #ffffff;
+
+		&::after {
+			background-image: url(../img/triangle-red.svg);
+		}
 	}
 	// .sale__text
 	&__text {
@@ -440,6 +444,78 @@ body {
 			color: $red;
 			text-decoration: underline;
 		}
+	}
+}
+
+.about {
+	// .about__content
+	&__content {
+	}
+	// .about__title
+	&__title {
+		margin-bottom: 70px;
+	}
+	// .about__body
+	&__body {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 89px;
+	}
+	// .about__text
+	&__text {
+		max-width: 552px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 27px;
+		color: $title;
+		p {
+			margin-bottom: 35px;
+		}
+	}
+	// .about__image
+	&__image {
+	}
+	// .about__numbers
+	&__numbers {
+	}
+}
+.numbers-about {
+	// .numbers-about__list
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	// .numbers-about__item
+	&__item {
+		width: 210px;
+		height: 94px;
+		padding-left: 21px;
+		padding-bottom: 17px;
+		background: #f6f6f6;
+		border-radius: 20px;
+	}
+}
+.item-numbers {
+	// .item-numbers__num
+	&__num {
+		margin-top: -37px;
+		// margin-bottom: 6px;
+		font-weight: bold;
+		font-size: 70px;
+		line-height: 1;
+
+		background-color: $red;
+		background-image: linear-gradient(115deg, #1a3f79 3.54%, #2aa270 52.36%);
+		background-size: 100%;
+		background-repeat: repeat;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	// .item-numbers__text
+	&__text {
+		font-weight: 500;
 	}
 }
 
